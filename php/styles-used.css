@@ -1,0 +1,54 @@
+/*! CSS Used from: https://computermixx.com/style.css */
+body{margin:0;padding:0;width:100%;background:url(https://computermixx.com/images/main_bg.gif);}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.main{padding:0;margin:0 auto;}
+.blok_header{margin:0 auto;padding:0;background:url(https://computermixx.com/images/header_bg.jpg) top repeat-x;}
+.header{margin:0 auto;padding:0;width:1003px;}
+.bg_menu{width:1003px;background:url(https://computermixx.com/images/menu_bg.jpg) top no-repeat;height:62px;margin:0 auto;padding:0;}
+.menu{padding:0;margin:0;width:750px;float:left;}
+.menu ul{padding:20px 20px 0 20px;margin:0;list-style:none;border:0;float:left;}
+.menu ul li{margin:0;padding:0;border:0;float:left;}
+.menu ul li a{border-right:1px solid #777777;float:left;margin:0;padding:5px 20px;color:#fff;font:normal 14px Arial, Helvetica, sans-serif;text-decoration:none;}
+.menu ul li a:hover{color:#037963;text-decoration:underline;}
+.menu ul li a.active{color:#037963;text-decoration:underline;}
+.header_text_bg{margin:0 auto;padding:0;background:url(https://computermixx.com/images/header_text_bg_top.gif) top repeat-x;}
+.header_text{height:363px;margin:0 auto;padding:0;width:1003px;background:url(https://computermixx.com/images/header_text_main_bg.gif) top center no-repeat;}
+.header_text .div .left1{float:left;width:420px;padding:27px 0 0 40px;margin:0;}
+.header_text .div .left1 h2{font:normal 36px Arial, Helvetica, sans-serif;color:#333436;padding:15px 0 5px 0;margin:0;}
+.header_text .div .left1 p{font:normal 11px Arial, Helvetica, sans-serif;color:#595959;line-height:1.8em;}
+.header_text .div .left1 ul{margin:10px  auto;padding:15px 0 0 0;list-style:none;}
+.header_text .div .left1 li{font:normal 13px  Tahoma, Geneva, sans-serif;color:#777777;background:url(https://computermixx.com/images/bg_p_ul_li.gif) left no-repeat;text-decoration:underline;padding:2px 0 2px 15px;line-height:normal;margin:3px 0;}
+.header_text p{font:normal 12px   Arial, Helvetica, sans-serif;color:#292929;padding:20px 0 0 0;margin:0;line-height:1.8em;}
+.body_resize{margin:0;padding:20px 0 0 0;background:#e5e5e5;}
+.body{width:1003px;margin:0 auto;padding:0;}
+.body a{color:#ff6c00;text-decoration:underline;}
+.body h2{border:0;font:bold 18px Arial, Helvetica, sans-serif;color:#000;margin:0px;padding:15px 5px;}
+.body img{float:left;padding:0;margin:10px;}
+.body p{font:normal 12px  Arial, Helvetica, sans-serif;color:#343434;line-height:1.8em;padding:5px;margin:0;}
+.body p span{color:#9d9d9d;}
+.body strong{color:#037963;}
+.body_small{width:331px;float:left;margin:0;padding:10px;}
+.body_big{width:632px;float:left;margin:0;padding:10px;}
+.footer{margin:0;padding:0;background:url(https://computermixx.com/images/footer_bg.gif) top repeat-x;}
+.footer_resize{margin:0 auto;padding:10px 0;width:978px;}
+.footer ul{margin:0;padding:20px 10px 10px 10px;list-style:none;float:left;}
+.footer ul li{margin:0;padding:0 10px;float:left;}
+.footer p{margin:0;padding:20px 20px 10px 20px;float:right;color:#989898;font:normal 11px Arial, Helvetica, sans-serif;line-height:1.8em;}
+.footer a{color:#acacac;font:normal 11px Tahoma, Geneva, sans-serif;text-decoration:none;line-height:1.8em;}
+.footer a:hover{text-decoration:underline;}
+.clr{clear:both;padding:0;margin:0;}
+.bg{clear:both;border-bottom:1px solid #cccccc;padding:15px 0;margin:0 0 10px 0;background:none;list-style:none;}
+/*! CSS Used from: Embedded */
+.gallery{float:right;width:419px;height:262px;margin:36px 108px 0 0!important;margin:36px 54px 0 0;}
+#slider{margin:0;padding:0;list-style:none;}
+#slider ul,#slider li{margin:0;padding:0;list-style:none;}
+#slider li{width:419px;height:262px;overflow:hidden;}
+p#controls{margin:0;position:relative;}
+#prevBtn{display:block;margin:0;overflow:hidden;width:38px;height:42px;position:absolute;left:430px;top:-70px;}
+#nextBtn{display:block;margin:0;overflow:hidden;width:38px;height:42px;position:absolute;left:430px;top:-115px;}
+#prevBtn a{display:block;width:38px;height:42px;background:url(https://computermixx.com/images/l_arrow.gif) no-repeat 0 0;}
+#nextBtn a{display:block;width:38px;height:42px;background:url(https://computermixx.com/images/r_arrow.gif) no-repeat 0 0;}
+.style1{color:#018667;}
+.style2{color:#037963;font-weight:bold;}
+.style3{color:#037963;}

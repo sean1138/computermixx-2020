@@ -1,0 +1,70 @@
+/*
+ie11 = no-flexboxlegacy flexboxtweener
+*/
+
+.no-flexboxlegacy.flexboxtweener, .no-flexboxlegacy.flexboxtweener body{
+	/*height:100%;*/
+}
+.no-flexboxlegacy.flexboxtweener *:not(nav){
+	border:1px solid red;
+}
+
+.no-flexboxlegacy.flexboxtweener nav{
+	display:table;
+}
+.no-flexboxlegacy.flexboxtweener nav > a,
+.no-flexboxlegacy.flexboxtweener nav > ul,
+.no-flexboxlegacy.flexboxtweener nav > p{
+	display:table-row;
+	text-align:center;
+	white-space:nowrap;
+}
+.no-flexboxlegacy.flexboxtweener footer nav > p{
+	display:table-caption;
+}
+
+.no-flexboxlegacy.flexboxtweener nav > a img{
+	display:block;
+	margin:0 auto;
+}
+.no-flexboxlegacy.flexboxtweener nav >ul li,
+.no-flexboxlegacy.flexboxtweener nav >p span{
+	display:table-cell;
+}
+header a:link, header a:visited, header a:active {
+	color: white;
+}
+
+.no-flexboxlegacy.flexboxtweener ul#topNavMenu{
+	display:block;
+	text-align:center;
+}
+.no-flexboxlegacy.flexboxtweener ul#topNavMenu li{
+	display:inline-block;
+}
+.no-flexboxlegacy.flexboxtweener main{
+	border-color:green;
+}
+.no-flexboxlegacy.flexboxtweener main,
+.no-flexboxlegacy.flexboxtweener main section,
+.no-flexboxlegacy.flexboxtweener main aside
+{
+	display:block;
+}
+
+.no-flexboxlegacy.flexboxtweener .primary{
+	display:block;
+	float:left;
+	width:75%;
+}
+.no-flexboxlegacy.flexboxtweener main aside{
+	display:block;
+	float:right;
+	width:25%;
+}
+.no-flexboxlegacy.flexboxtweener .primary,
+.no-flexboxlegacy.flexboxtweener main aside {
+	content: "";
+	display: table;
+	clear: both;
+}

@@ -1,0 +1,60 @@
+2020.08.10 - 23hrs+
+
+https://computermixx.com/
+	* not responsive
+	* horizontal scroll bar at 1024x768 chrome, firefox & IE11
+	* image files used for backgrounds that could be CSS gradients
+	* jquery library (56 KB) only for image slider/carousel on main page?
+	* easySlider1.5.js = 5KB
+	* very poor lighthouse score 2020.08.08_090552.jpg
+	* https://computermixx.com/images/main_bg.gif = 404, line 29 style.css .header_text
+	* no meta description
+	* no open graph
+
+Accessibility issues:
+	* page headings are H2 but no H1 found
+	* every heading text on a page is H2 - flat/no hierarchy
+	* images missing alt text
+	* multiple images with same alt text
+	* HTML document language missing
+	* 11 pixel font sizes?!
+	* VERY low contrast text/background colors
+
+style.css notes:
+	* 18 floats
+	* 5 KB (4274 bytes) for main page, 8 KB (7264 bytes) file size + 1014 bytes inlined on main page
+
+https://computermixx.com/network.html
+	* youtube videos (in table element) don't work in modern/current browsers that don't support flash anymore
+
+https://computermixx.com/intuit.html
+	* PDF download is editable
+
+logo color:
+	#11A499
+	hsla(176, 81%, 35%, 1)
+	rgba(17, 164, 153, 1)
+
+link color:
+	#ff6c00
+	hsla(25, 100%, 50%, 1)
+	rgba(255, 108, 0, 1)
+
+
+https://web.archive.org/web/20190308174952/http://www.computermixx.com/index.html - banner add, image, you won't get any search engine hits from an image ad like this
+
+
+2020.08.14 - ie fixes ... 9am - noon
+use modernizr flex detection
+ie html class
+	flexbox no-flexboxlegacy flexboxtweener flexwrap
+chrome html class
+	flexbox flexboxlegacy no-flexboxtweener flexwrap
+
+https://philipwalton.com/articles/normalizing-cross-browser-flexbox-bugs/
+	* In IE 10-11, flex items ignore their parent container’s height if it’s set via the min-height property.
+	* Chrome, Opera, and Safari fail to honor the default minimum content sizing of flex items.
+	* IE 10-11 don’t allow unitless flex-basis values in the flex shorthand.
+
+2021.04.01 - upoaded screen recording retrospective/review
+https://youtu.be/6AX3AuMryhE

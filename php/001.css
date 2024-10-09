@@ -1,0 +1,810 @@
+:root{
+	/*hue from logo green*/
+	--color1:hsla(176, 81%, 35%, 1);
+	--color1dark:hsla(176, 81%, 25%, 1);
+	--color1light:hsla(176, 81%, 75%, 1);
+	/*links orange*/
+	--color2:hsla(25, 75%, 50%, 1);
+	--color2dark:hsla(25, 100%, 29%, 1);
+	--color2light:hsla(25, 100%, 75%, 1);
+	/*text*/
+	--bodytextdark:hsla(0, 0%, 10%, 1);
+	/**/
+	--bordercolor:rgba(0,0,0,.08);
+	--colorwhite:hsla(0,0%,100%,1);
+	--colorwhitet:hsla(0,0%,100%,.75);
+	--colorbg1:hsla(0,0%,0%,.125);
+	--focuscolor:hsla(205, 91%, 73%, 1);
+	--invalidcolor:hsla(0, 91%, 50%, 0.25);
+}
+/*** START normalize */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{line-height:1.15;-webkit-text-size-adjust:100%}
+body{margin:0}
+main{display:block}
+h1{font-size:2em;margin:.67em 0}
+hr{box-sizing:content-box;height:0;overflow:visible}
+pre{font-family:monospace,monospace;font-size:1em}
+a{background-color:transparent}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}
+code,kbd,samp{font-family:monospace,monospace;font-size:1em}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-.25em}
+sup{top:-.5em}
+img{border-style:none}
+button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}
+button,input{overflow:visible}
+button,select{text-transform:none}
+[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{padding:.35em .75em .625em}
+legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
+progress{vertical-align:baseline}
+textarea{overflow:auto}
+[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+details{display:block}
+summary{display:list-item}
+template{display:none}
+[hidden]{display:none}
+/*** END normalize */
+/************************start reset**************************/
+*, *:before, *:after {box-sizing: inherit;}
+/* html5 elements for older browsers*/
+article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{display:block;}
+command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr {display:inline;}
+/* using height:100% on html and body allows to style containers with a 100% height
+ * the overflow declaration is to make sure there is a gutter for the scollbar in all browsers regardless of content
+ * note that there is no font-size declaration set in this rule. If you wish to include one, you should use font-size: 100.01% to prevent bugs in IE and Opera
+ */
+html {box-sizing: border-box; scroll-behavior: smooth;height: 100%; /*overflow-y: scroll;*/ font-size:100.01%;}
+/* not all browsers set white as the default background color
+ * color is set to create not too much contrast with the background color
+ * line-height is to ensure that text is legible enough (that there is enough space between the upper and lower line)
+ */
+body {text-rendering: optimizeSpeed; line-height:1.625; color:var(--bodytextdark);background:white;}
+/*** start typography ***/
+body, textarea, input{font-family: "Lora", Georgia, serif; /*letter-spacing:1px;*/}
+h1, h2, h3, h4, h5, h6, input[type=submit], input[type=button], button, select, nav a {font-family: 'Montserrat', Helvetica, Arial, sans-serif;}
+pre, tt, code, kbd, samp, var {font-family: "Courier New", Courier, monospace;}
+/* avoid browser default inconsistent heading font-sizes - and pre/code/kbd too */
+H1, H2, H3, H4, H5, H6, PRE, CODE, KBD {font-size:1em; }
+H1, H2, H3, H4, H5, H6{font-weight:900;line-height:1.4;text-transform: uppercase;}
+/*ensure font-weight heritage for headings with links inside also on IE8*/
+H1 A, H2 A, H3 A,H4 A, H5 A, H6 A { font-weight: inherit;}
+H1 {font-size: 2.625em;}/*golden 16 main 42 title*/
+H2, .text-lead {font-size: 1.625em;}/*golden 16 main 26 headline*/
+H3 {font-size: 1.25em;}/*golden 16 main sub-headline*/
+H4 {font-size: 1.2em;}
+H5 {font-size: 1.1em;}
+H6 {font-size: 1em;}
+/*SUP and SUB fix to maintain line-height*/SUP, SUB {height: 0;line-height: 1;vertical-align: baseline;_vertical-align: bottom;position: relative;font-size:smaller;}SUP {bottom: 1ex;}SUB {top: .5ex;}
+TH, DT, B, STRONG{font-weight:700;}
+EM {font-style:italic;}
+/* This should be self explanatory */blockquote, q, em, cite, dfn, i, cite, var {font-style: italic;}
+/* to prevent some browsers from inserting quotes on "q" and "p" ("p" in blockquotes)*/blockquote p:before, blockquote p:after, q:before, q:after {content: '';}blockquote, q {quotes: "" "";}
+/* link underlines tend to make hypertext less readable, because underlines obscure the shapes of the lower halves of words */:link,:visited,INS {text-decoration:none;}
+/*** end typography ***/
+/* de-italicize address,abbr */address,abbr {font-style:normal;}
+/*** start TABLEs ***/
+/** rules to make TABLEs consistent across all browsers **/
+/* global TABLE rules - TABLEs should only be used to present data in tabular format, never for design/layout/positioning purposes, tables will get borders by default even if that border attribute is set to zero */
+TABLE{border-collapse:collapse;margin:1em auto;width:100%;max-width:96%;table-layout: fixed; background:white;}
+TABLE CAPTION{border: 1px solid #999; border-bottom:none; font-weight:bold;}
+TABLE TD, TABLE TH{text-align:left;}
+TABLE TD, TABLE TH, TABLE CAPTION{padding:6px;}
+TABLE TD P , TABLE TH P{margin: .666em 0; line-height:1.333}
+/* should NOT use valign in html, setting rules here for all tables */
+TABLE TD{vertical-align:top;background-color:rgba(0,0,0,.015);}
+TABLE TH {vertical-align:middle;background-color:rgba(0,0,0,.05);font-weight:600;}
+TABLE TH STRONG{color:inherit;font-weight:800;}
+TABLE {border-bottom:1px solid #999;}
+TABLE+TABLE{margin-top:1em;}
+TABLE TD, TABLE TH{padding:6px;border:1px solid #999;border-bottom:none;}
+/* zebra tables - class on TR tags of first, last, even and odd - this allows us to have different colored TABLE rows to clarify TABLE content - should be subtle color changes  */
+TR.first TD, TR.first TH {background:#ffcece;}
+TR.last TD {background:#ffcece;}
+TR.even TD {background:#ffecec;}
+TR.odd TD {background:#ffdada;}
+/* bootstrap style tables */
+.hlines TD, .hlines TH{border:none;border:none;background:none;}
+.hlines CAPTION{border: 1px solid #DDD; border-radius:.5em;}
+.hlines TH{border-bottom: 2px solid #ddd;}
+.hlines, .hlines TD{border-bottom: 1px solid #ddd;}
+/* no borders tables */
+.borderless, .borderless TD, .borderless TH{background:none;border:none;}
+/* shrinkfit tables */
+.shrinkfit{width:auto;}
+/* not centered tables */
+.nocnt{margin:0 1em;}
+/*** end TABLEs ***/
+/*** start rules to make LISTs consistant across all browsers ***/
+/* give lists consistant style - IE uses margin-left FF uses padding-left */
+OL, UL{margin:0;padding:0;line-height:1.4em;}
+OL{list-style:decimal;}
+OL OL{list-style:lower-alpha;}
+OL OL OL{list-style:upper-roman;}
+UL{list-style:disc;}
+UL UL{list-style:circle;}
+UL UL UL{list-style:square;}
+DL, OL, UL {margin-top:.25em;margin-left: 3em; padding-left: 0em; list-style-position:outside;}
+/* nested lists get reduced margins and paddings */
+UL UL, OL OL, OL UL, UL OL {margin-left: 1em;list-style-position:outside;}
+OL OL UL, UL OL UL, OL OL OL {margin-left: 1em;list-style-position:outside;}
+LI{margin:0 1em .5em 0;padding:0;text-indent:0em;}
+DT{/*float:left;clear:left;*/font-weight:bold; margin-right:.5em;}
+DD{margin-left:0;padding-left:0;-webkit-margin-start:0px;font-weight:normal;margin-bottom:.5em;}
+LI>UL, LI>OL{margin-top:.25em;/*margin-bottom:-.5em;*/padding-bottom:-.25em;}
+UL[class],OL[class]{list-style: none;}
+/* if we want to override default list style types do it with a class... */
+UL.circle {list-style-type:circle;}
+UL.square {list-style-type:square;}
+UL.disc{list-style-type:disc;}/*The marker is a filled circle. This is default*/
+OL.armenian{list-style-type:armenian;}/*The marker is traditional Armenian numbering*/
+OL.decimal{list-style-type:decimal;}/*The marker is a number*/
+OL.decimal-leading-zero{list-style-type:decimal-leading-zero;}/*The marker is a number padded by initial zeros (01, 02, 03, etc.)*/
+OL.georgian{list-style-type:georgian;}/*The marker is traditional Georgian numbering (an, ban, gan, etc.)*/
+OL.lower-alpha{list-style-type:lower-alpha;}/*The marker is lower-alpha (a, b, c, d, e, etc.)*/
+OL.lower-greek{list-style-type:lower-greek;}/*The marker is lower-greek (alpha, beta, gamma, etc.)*/
+OL.lower-latin{list-style-type:lower-latin;}/*The marker is lower-latin (a, b, c, d, e, etc.)*/
+OL.lower-roman{list-style-type:lower-roman;}/*The marker is lower-roman (i, ii, iii, iv, v, etc.)*/
+OL.upper-alpha{list-style-type:upper-alpha;}/*The marker is upper-alpha (A, B, C, D, E, etc.)*/
+OL.upper-latin{list-style-type:upper-latin;}/*The marker is upper-latin (A, B, C, D, E, etc.)*/
+OL.upper-roman{list-style-type:upper-roman;}/*The marker is upper-roman (I, II, III, IV, V, etc.)*/
+UL.none{list-style-type:none;}
+UL.imgtext img{
+	margin-right:1em;
+	vertical-align: middle;
+}
+/*** end rules to make LISTs consistent across all browsers ***/
+/*** start FORM elements ***/
+/* get rid of ugly box border in IE*/
+INPUT[type="radio"]{margin:0px;padding:0px;border:0px;background-color:transparent;}
+/* align checkboxes, radios, text inputs with their label */
+/*INPUT[type="radio"] { vertical-align: text-bottom; }
+INPUT[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }*/
+.ie6 INPUT{ vertical-align: text-bottom; }
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer;}
+input[type=button], input[type=submit], button{white-space:nowrap;}/*buttons with multiple lines look dumb and usually wrong*/
+/*** end FORM elements ***/
+/*** start links ***/
+/* remember to define focus styles! */
+:focus {outline: 0; outline-offset: 2px;}
+/* who thought blue linked image borders were a good idea? */
+a img,:link img,:visited img, a object,:link object,:visited object{ border:0; }
+/*some long-arse links refused to break nicely, this fixes*/
+A{word-wrap:break-word;}
+/* to prevent a gap from showing below images in some browsers */
+img {vertical-align: bottom;}
+/*
+styling for links and visited links as well as for links in a hovered, focus and active state
+ * make sure to keep these rules in that order, with :active being last
+ * text-decoration: none is to make the links more legible while they are in a hovered, focus or active state
+ * link underlines tend to make hypertext less readable, because underlines obscure the shapes of the lower halves of words
+ * a:focus and :focus are used to help keyboard users, you may change their styling, but make sure to give users a visual clue of the element's state.
+ * outline:none used with the pseudo-class :hover is to avoid outline when a user clicks on links
+ * note that these last rules do not do anything in IE as this browser does not support "outline"
+*/
+a {text-decoration-skip-ink: auto;}
+a:link {color: #0000FF;text-decoration:none;}
+a:visited {color: #800080;text-decoration: none;}
+a:hover {text-decoration: underline;}
+a:hover>img, a:focus {text-decoration: none;}
+a:focus,nav input:focus + label{outline: 2px dotted var(--focuscolor);}
+a:hover,a:active {outline: none;}
+a:active{color: #FF0000;}
+/**/
+a:link {color: var(--color2dark);}
+footer, footer a:link, footer a:visited {color: #DBDBDB;}
+a:visited {color: #800080;}
+a:active{color: #FF0000;}
+/*** end links ***/
+IFRAME{width:100%;}
+/************************end reset**************************/
+::selection { background: var(--color1); color:white;  }
+.text-mixx, strong{
+	color:var(--color1dark);
+	font-weight: 600;
+}
+.text-muted{
+	opacity:.5;
+}
+ul.mixx {
+		list-style: none;
+}
+ul.mixx li{
+	position: relative;
+}
+ul.mixx li::before {
+	content: "";
+	position: absolute;
+	left: -1.2em;
+	top: .12em;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-bottom-color:var(--color1dark);;
+}
+ul.mixx li::after {
+	content: "";
+	position: absolute;
+	left: -1.2em;
+	top: calc(10px + .12em);
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-top-color:var(--color1dark);;
+}
+/* START utility classes */
+.float-r{
+	float:right;
+}
+.float-l{
+	float:left;
+}
+/*clear floats without an additional element*/
+.float-r:after, .float-l:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.d-none{
+	display: none !important;
+}
+.mb-0{
+	margin-bottom:0;
+}
+.p-0{
+	padding:0 !important;
+}
+.p-1{
+	padding:.25em !important;
+}
+.p-2{
+	padding:.5em !important;
+}
+.p-3{
+	padding:1em !important;
+}
+img.responsive, img.fluid-width{
+	height:auto;
+	width:100%;
+}
+/* END utility classes */
+/* START media object */
+.media-object {
+	display: flex;
+	align-items: flex-start;
+	padding:1em;
+	background: rgb(255,255,255);
+	background: linear-gradient(140deg, rgba(255,255,255,1) 0%, rgba(204,204,204,0.25) 100%);
+}
+.media-object + .media-object{
+	margin-top:1em;
+}
+
+.media-thumb {
+	margin-right: 1em;
+}
+
+.media-body {
+	flex: 1;
+}
+.media-title{
+	margin:0;
+}
+.media-body p{
+	margin:0;
+}
+/* END media object */
+/* class="fitVids" youtube/vimeo container element added via 001.js */
+.fitVids-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.fitVids-wrapper + .fitVids-wrapper{
+	margin-top:1em;
+}
+.fitVids-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	background: rgb(255,255,255);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, hsla(25, 100%, 50%, 0.03) 50%, rgba(255,255,255,1) 100%);
+	box-shadow: inset 0 0 10vh rgba(0,0,0,0.2);
+}
+/* topNavMenu toggle */
+.topNavMenu-toggle{
+	padding:.5em;
+}
+label{
+	display:block;
+}
+textarea{
+	resize:vertical;
+}
+.flexform{}
+.flexform-group{
+	display: flex;
+	flex-direction: row;
+}
+.flexform-group label{
+	flex: none;
+	display: block;
+	width: 125px;
+	font-weight: bold;
+	font-size: 1em;
+}
+.flexform-group label.wide{
+	width:40%;
+}
+.flexform-group input:not([type=button]):not([type=submit]), .flexform-group textarea {
+	 flex: 1 1 auto;
+	 display: block;
+ }
+ .flexform-group.flex-end{
+	align-items: flex-end;
+	justify-content: flex-end;
+ }
+
+#menuShowHide {
+	position:absolute;
+	left:-999em;
+}
+#menuShowHide + label:before {
+	content:"Show menu";
+}
+#menuShowHide:checked + label:before {
+	content:"Hide Menu";
+}
+#menuShowHide:checked ~ #topNavMenu {
+	display:flex;
+}
+.topNavMenu-toggle{
+	display:none;
+}
+
+/*
+hsla(0, 0%, 60%, 1)
+*/
+header{
+	background:black;
+	color:var(--colorwhite);
+}
+footer{
+	border-top:1px solid hsla(0, 0%, 57%, 1);
+	background: rgb(74,74,74);
+	background: linear-gradient(0deg, rgba(74,74,74,1) 0%, rgba(62,62,62,1) 100%);
+}
+header nav{
+	/*prevent text from getting selected from toggle*/
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		 -ms-user-select: none;
+				 user-select: none;
+}
+header nav, footer > nav{
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-items: flex-end;
+	max-width:1280px;
+}
+footer > nav{
+	align-items: center;
+}
+header nav > a{
+	margin: 0 1rem 0 1vw;
+	max-width:50%;
+}
+footer p{
+	margin:0 1vw;
+}
+header a:link, header a:visited, header a:active{
+	color:var(--colorwhite);
+}
+header img{
+	height:auto;
+	max-width:100%;
+	vertical-align: baseline;
+}
+header ul, footer ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items:center;
+	list-style-type: none;
+	text-transform: capitalize;
+}
+footer ul{
+	flex-wrap:wrap;
+	justify-content: flex-start;
+}
+header li, footer li{
+	margin:0;
+	padding:0;
+}
+header li a, footer li a{
+	display:block;
+	padding: 1em;
+	white-space: nowrap;
+}
+header li a:hover{
+	background:hsla(0,0%,100%,.25);
+}
+footer li a:hover{
+	background:hsla(0,0%,0%,.25);
+}
+header li a{
+	border-bottom:4px solid transparent;
+}
+
+footer li a[aria-current="page"]{
+	color:var(--color1);
+}
+header li a[aria-current="page"]:hover, footer li a[aria-current="page"]:hover{
+	background:unset;
+	text-decoration: none;
+}
+main{
+	min-height:calc(100vh - 57px - 78px);
+}
+main, .flexrow{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	margin:0 auto;
+	width:100ch;
+	max-width:100%;
+	box-shadow: 0px 0px 1em rgba(25,30,50,0.4);
+	background: rgba(0,0,0,.05);
+	/*background: linear-gradient(0deg, rgba(223,223,223,1) 0%, rgba(255,255,255,1) 100%);*/
+}
+main > *, .flexrow > *{
+	padding:1em;
+	/*margin:1em;*/
+	/*border:1px solid red;*/
+
+}
+main h1:first-of-type{
+	margin-top:0;
+}
+main aside{
+	border-left:1px solid var(--bordercolor);
+	border-top:1px solid var(--bordercolor);
+}
+.line, .bg{
+	margin:2em 0;
+	border-top:1px solid var(--bordercolor);
+}
+
+main section{
+
+}
+section.primary{
+	border-top:1px solid var(--bordercolor);
+}
+.text-lead{
+	line-height:1.4;
+}
+.flexrow{
+	width:100%;
+	box-shadow: none;
+	background: none;
+}
+/* START to be used as .flexrow direct child elements */
+.fullwidth{
+	flex:auto;
+	width:100%;
+}
+.halfwidth{
+	flex:auto;
+
+	width:50%;
+}
+.thirdwidth{
+	flex:auto;
+
+	width:33.3%;
+}
+/* END to be used as .flexrow direct child elements */
+
+.fullwidth.banner{
+	display: flex;
+	position:relative;
+	align-items: center;
+	justify-content: center;
+	padding:0;
+}
+.fullwidth.banner img{
+	height:auto;
+	max-width:100vw;
+}
+.banner-text {
+	display: flex;
+	align-items: center;
+	margin-left: -4vw;
+	margin-right: -4vw;
+	line-height:1.4;
+	background:white;
+	border: 2px solid var(--color1dark);
+}
+
+.banner-text-img{
+	display: flex;
+	align-self: center;
+	position: relative;
+	margin-right: 1em;
+	width: 20%;
+	overflow: hidden;
+	min-width: 98px;
+}
+.banner-text-img img {
+	/*margin:-2em 1em -3em 1em;*/
+	/*object-fit: contain;*/
+	clip-path: inset(20px 0 40px 0);
+	margin: -20px 0 -40px 1em;
+}
+
+.banner-text-body {
+	margin:0 1em 0 0;
+	flex: 1;
+}
+.banner-text-body h1{
+	margin:0;
+	text-transform:none;
+	white-space: nowrap;
+	color: var(--color1dark);
+}
+.banner-text-body p{
+	margin:0;
+	font-weight:600;
+}
+.banner-text-body strong{
+	font-weight: 700;
+	color: inherit;
+}
+@media all and (max-width: 135ch) {
+	body{
+		box-shadow: none;
+	}
+	.banner-text{
+		margin:0;
+	}
+	.banner-text img{
+		clip-path:unset;
+		margin: 0;
+		height:auto;
+		width:100%;
+		min-width:98px;
+	}
+	.banner-text-img{
+		margin:0 1em;
+	}
+	.banner-text-body h1{
+		font-size:3.33vw;
+		white-space: unset;
+	}
+}
+
+.container-laptop{
+	margin-left: 1em;
+	height:332px;
+	width:614px;
+	transform: scale(.8);
+	background: url(images/laptop_420x260screen.png) no-repeat center center;
+}
+.container-laptop .flickity-enabled{
+	top: 20px;
+	left: 91px;
+}
+.smi{
+	vertical-align: middle;
+}
+.logos-sales{
+	margin:0 auto;
+	width:100%;
+	border-radius:.5em;
+	background:white;
+}
+.logos-sales img{
+	height:auto;
+	max-width:25%;
+	object-fit: contain;
+}
+/* START forms */
+
+/* Fields */
+.flexform fieldset{
+	border:1px solid var(--bordercolor);
+}
+.flexform legend{
+	padding:0 .25em;
+}
+.flexform legend h2{
+	margin:0;
+}
+.flexform p{
+	margin-top:0;
+}
+
+.flexform input, .flexform button,.flexform select,.flexform textarea{
+	transition:all .125s;
+}
+.flexform input:not([type=button]), .flexform input:not([type=submit]), .flexform select, .flexform textarea {
+	background-color: var(--colorwhitet);
+	border-radius: 0;
+	border: 2px solid var(--bordercolor);
+	color: var(--bodytextdark);
+	height: 45px;
+}
+.flexform textarea{
+	height:unset;
+}
+.flexform input:not([type=button]):hover, .flexform input:not([type=submit]):hover, .flexform select:hover, .flexform textarea:hover{}
+.flexform input:not([type=button]):active, .flexform input:not([type=submit]):active, .flexform select:active, .flexform textarea:active{}
+.flexform input:not([type=button]):focus, .flexform input:not([type=submit]):focus, .flexform select:focus, .flexform textarea:focus{
+	border: 2px solid var(--color2light);
+}
+.flexform input:invalid{
+	background-color:var(--invalidcolor);
+}
+::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	color: var(--bodytextdark);
+}
+:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: var(--bodytextdark);
+	opacity: 1;
+}
+::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: var(--bodytextdark);
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: var(--bodytextdark);
+}
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: var(--bodytextdark);
+}
+/* Button */
+ .flexform input[type=submit], .flexform input[type=button], .flexform button, .flexform .flexform-button {
+	text-transform: uppercase;
+	padding: 10px 60px;
+	color: var(--bodytextdark);
+	background: var(--color2);
+	border:1px solid transparent;
+	font-weight: normal;
+}
+
+.flexform input[type=submit]:hover, .flexform input[type=button]:hover, .flexform button:hover, .flexform .flexform-button:hover{
+	/*color: var(--colorwhitet);*/
+	background: var(--color2light);
+}
+.flexform input[type=submit]:focus, .flexform input[type=button]:focus, .flexform button:focus, .flexform .flexform-button:focus{
+	border: 1px solid var(--focuscolor);
+}
+.flexform input[type=submit]:active, .flexform input[type=button]:active, .flexform button:active, .flexform .flexform-button:active{
+	color: var(--colorwhitet);
+	background: var(--color2dark);
+}
+/* END forms */
+
+@media (min-width: 600px) {
+	#menuShowHide{
+		display:none;
+	}
+	main {
+		flex-direction: row;
+		flex: 1;
+	}
+	section {
+		flex: 1 0 65%;
+	}
+	aside {
+		/* 30% is the width of the columns */
+		flex: 0 0 35%;
+	}
+	header li a[aria-current="page"]{
+		border-bottom-color:var(--color1);
+	}
+}
+
+/* ****** ****** */
+@media all and (max-width: 990px) {
+	header nav {
+		flex-direction: column;
+		align-items: center;
+	}
+	header h1 {
+		max-width:unset;
+	}
+	header ul {
+		width: 100%;
+		justify-content: space-around;
+		/* align to keep current page effect at bottom of header */
+		align-items: flex-end;
+	}
+	header li a, footer li a {
+		padding: 2vw;
+		white-space: break-spaces;
+		width: min-content;
+	}
+	.container-laptop{
+		margin:0 auto;
+		height:unset;
+		width: max-content;
+		background:none;
+	}
+	.container-laptop.float-r{
+		float:none;
+	}
+	.container-laptop .flickity-enabled{
+		top:0;
+		left:0;
+	}
+	section.primary, main aside {
+		/* 100% is the width of the columns */
+		flex: 0 0 100%;
+		border:none;
+	}
+	.banner-text-body h1{
+		font-size:1.625em;
+		white-space: unset;
+	}
+	.banner-text-body p{
+		font-size:1.25em;
+	}
+}
+/* ****** ****** */
+ @media all and (max-width: 600px) {
+	h1{
+		font-size:6vw;
+	}
+	header ul {
+		flex-direction: column;
+		align-items:revert;
+	}
+	header li a {
+		text-align: center;
+		padding: 10px;
+		width:auto;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	header li:last-of-type a {
+		border-bottom: none;
+	}
+	#topNavMenu {
+		display:none;
+	}
+	.topNavMenu-toggle {
+		display:block;
+	}
+	header li a[aria-current="page"]{
+		color:var(--color1);
+	}
+	.text-lead {font-size: 1.25em;}
+}
